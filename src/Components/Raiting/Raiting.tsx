@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 
 type RaitingPropsType = {
-
+    value: RaitingValueType
+    onClick: (value: RaitingValueType) => void
 }
 
-export function UncontroledRaiting(props: RaitingPropsType) {
+export type RaitingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
-    let [star, setStar]= useState(0 )
+export function Raiting(props: RaitingPropsType) {
 
 
     return <div>
-        <Star selected={star > 0}/> <button onClick={()=> {setStar(1)}}>1</button>
-        <Star selected={star > 1}/> <button onClick={()=> {setStar(2)}}>2</button>
-        <Star selected={star > 2}/> <button onClick={()=> {setStar(3)}}>3</button>
-        <Star selected={star > 3}/> <button onClick={()=> {setStar(4)}}>4</button>
-        <Star selected={star > 4}/> <button onClick={()=> {setStar(5)}}>5</button>
+        <Star selected={props.value > 0} onClick={props.onClick} value={1}/>
+        <Star selected={props.value > 1} onClick={props.onClick} value={2}/>
+        <Star selected={props.value > 2} onClick={props.onClick} value={3}/>
+        <Star selected={props.value > 3} onClick={props.onClick} value={4}/>
+        <Star selected={props.value > 4} onClick={props.onClick} value={5}/>
 
     </div>
 
@@ -22,12 +23,18 @@ export function UncontroledRaiting(props: RaitingPropsType) {
 
 type StarPropsType = {
     selected: boolean;
+    value: RaitingValueType
+    onClick: (value: RaitingValueType) => void
 }
 
-function Star(props: StarPropsType) {
-    if(props.selected === true){
-        return <span><b>star </b></span>
-    } else {
-        return <span>star </span>
-    }
+export function Star(props: StarPropsType) {
+    return <span onClick={() => {
+        props.onClick(props.value)
+    }}>
+        {props.selected ? <b>star</b> : 'star'}
+    </span>
+
 }
+
+
+
