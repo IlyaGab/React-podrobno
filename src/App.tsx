@@ -11,17 +11,21 @@ import {GetValueOfUncontrolledInputByButtonPress
 import TrackingValueOfUncontrolledInput from './Components/UncontrolledInput/UncontrolledInput';
 import ControlledInput, {ControlledCheckbox, ControlledSelect} from './Components/ControlledInput/ControlledInput';
 
+let array = [{title:'Ilya', value:1}, {title:'Alena', value:2},{title: 'Dimych', value:3}]
 
 function App() {
-    console.log('App rendering');
+
 
     let [raitingValue, setRaitingValue] = useState<RaitingValueType>(1)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [on, setOn] = useState(true)
+
+
+
     return (
         <div>
             <UncontrolledAccordion titleValue={'Menu'}/>
-            <Accordion titleValue={'Menu'} accordion={accordionCollapsed} setAccordion={setAccordionCollapsed}/>
+            <Accordion titleValue={'Menu'} accordion={accordionCollapsed} setAccordion={setAccordionCollapsed} items={array} />
             <UncontroledRaiting/>
             <Raiting value={raitingValue} onClick={setRaitingValue}/>
             <UncontrolledOnOff setOn={setOn}/> {on.toString()}
