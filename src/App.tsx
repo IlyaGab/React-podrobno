@@ -9,6 +9,7 @@ import {UncontrolledAccordion} from './Components/Accordion/UncontrolledAccordio
 import {GetValueOfUncontrolledInputByButtonPress
 } from './Components/UncontrolledInput/UncontrolledInput';
 import TrackingValueOfUncontrolledInput from './Components/UncontrolledInput/UncontrolledInput';
+import ControlledInput, {ControlledCheckbox, ControlledSelect} from './Components/ControlledInput/ControlledInput';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
             <UncontrolledOnOff setOn={setOn}/> {on.toString()}
             <TrackingValueOfUncontrolledInput/>
             <GetValueOfUncontrolledInputByButtonPress/>
+            <ControlledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
         </div>
     );
 }
