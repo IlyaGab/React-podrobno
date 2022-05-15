@@ -44,7 +44,7 @@ const Select = (props: SelectPropsType) => {
             setActive(false)
         }
     }
-    
+
     const onClickHandlerTitle = () => {
         setActive(!active)
     }

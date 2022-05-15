@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {RaitingValueType} from './Raiting';
 
-type RaitingPropsType = {}
 
-export function UncontroledRaiting(props: RaitingPropsType) {
+
+
+export function UncontroledRaiting() {
 
     let [star, setStar] = useState(1)
 
