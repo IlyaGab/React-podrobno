@@ -10,16 +10,17 @@ import {GetValueOfUncontrolledInputByButtonPress
 } from './Components/UncontrolledInput/UncontrolledInput';
 import TrackingValueOfUncontrolledInput from './Components/UncontrolledInput/UncontrolledInput';
 import ControlledInput, {ControlledCheckbox, ControlledSelect} from './Components/ControlledInput/ControlledInput';
+import Select from './Components/Select/Select';
 
-let array = [{title:'Ilya', value:1}, {title:'Alena', value:2},{title: 'Dimych', value:3}]
+let array = [{title:'Ilya', value:'1'}, {title:'Alena', value:'2'},{title: 'Dimych', value:'3'}]
 
 function App() {
 
 
     let [raitingValue, setRaitingValue] = useState<RaitingValueType>(1)
+    let [select, setSelect]= useState('3')
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [on, setOn] = useState(true)
-
 
 
     return (
@@ -34,6 +35,7 @@ function App() {
             <ControlledInput/>
             <ControlledCheckbox/>
             <ControlledSelect/>
+            <Select value={select} onChange={setSelect} items={array}/>
         </div>
     );
 }
