@@ -11,6 +11,7 @@ import {GetValueOfUncontrolledInputByButtonPress
 import TrackingValueOfUncontrolledInput from './Components/UncontrolledInput/UncontrolledInput';
 import ControlledInput, {ControlledCheckbox, ControlledSelect} from './Components/ControlledInput/ControlledInput';
 import Select from './Components/Select/Select';
+import ReactMemo from './Components/ReactMemo';
 
 let array = [{title:'Ilya', value:'1'}, {title:'Alena', value:'2'},{title: 'Dimych', value:'3'}]
 
@@ -36,6 +37,7 @@ function App() {
             <ControlledCheckbox/>
             <ControlledSelect/>
             <Select value={select} onChange={setSelect} items={array}/>
+            <ReactMemo/>
         </div>
     );
 }
