@@ -2,16 +2,17 @@ import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from './Components/Accordion/Accordion';
 import {UncontroledRaiting} from './Components/Raiting/UncontrolledRaiting';
-
 import {Raiting, RaitingValueType} from './Components/Raiting/Raiting';
 import {UncontrolledOnOff} from './Components/OnOff/UncontrolledOnOff';
 import {UncontrolledAccordion} from './Components/Accordion/UncontrolledAccordion';
-import {GetValueOfUncontrolledInputByButtonPress
-} from './Components/UncontrolledInput/UncontrolledInput';
+import {GetValueOfUncontrolledInputByButtonPress} from './Components/UncontrolledInput/UncontrolledInput';
 import TrackingValueOfUncontrolledInput from './Components/UncontrolledInput/UncontrolledInput';
 import ControlledInput, {ControlledCheckbox, ControlledSelect} from './Components/ControlledInput/ControlledInput';
 import Select from './Components/Select/Select';
-import ReactMemo from './Components/ReactMemo';
+import ReactMemo from './Components/ReactMemo/ReactMemo';
+import UseMemo from './Components/UseMemo/UseMemo';
+import Factorial from './Components/Factorial/Factorial';
+
 
 let array = [{title:'Ilya', value:'1'}, {title:'Alena', value:'2'},{title: 'Dimych', value:'3'}]
 
@@ -38,6 +39,8 @@ function App() {
             <ControlledSelect/>
             <Select value={select} onChange={setSelect} items={array}/>
             <ReactMemo/>
+            <Factorial />
+            <UseMemo />
         </div>
     );
 }
