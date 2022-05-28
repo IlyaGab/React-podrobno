@@ -12,6 +12,8 @@ import Select from './Components/Select/Select';
 import ReactMemo from './Components/ReactMemo/ReactMemo';
 import UseMemo from './Components/UseMemo/UseMemo';
 import Factorial from './Components/Factorial/Factorial';
+import UseCallback from './Components/useCallback/UseCallback';
+
 
 
 let array = [{title:'Ilya', value:'1'}, {title:'Alena', value:'2'},{title: 'Dimych', value:'3'}]
@@ -41,6 +43,7 @@ function App() {
             <ReactMemo/>
             <Factorial />
             <UseMemo />
+            <UseCallback />
         </div>
     );
 }
