@@ -13,6 +13,7 @@ import ReactMemo from './Components/ReactMemo/ReactMemo';
 import UseMemo from './Components/UseMemo/UseMemo';
 import Factorial from './Components/Factorial/Factorial';
 import UseCallback from './Components/useCallback/UseCallback';
+import UseState from './Components/UseState/UseState';
 
 
 
@@ -44,6 +45,7 @@ function App() {
             <Factorial />
             <UseMemo />
             <UseCallback />
+            <UseState/>
         </div>
     );
 }
