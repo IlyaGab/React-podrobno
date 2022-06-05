@@ -14,7 +14,7 @@ import UseMemo from './Components/UseMemo/UseMemo';
 import Factorial from './Components/Factorial/Factorial';
 import UseCallback from './Components/useCallback/UseCallback';
 import UseState from './Components/UseState/UseState';
-import UseEffect from './Components/UseEffect/UseEffect';
+import UseEffect, {SetTimeoutExample} from './Components/UseEffect/UseEffect';
 
 
 
@@ -48,6 +48,7 @@ function App() {
             <UseCallback />
             <UseState/>
             <UseEffect/>
+            <SetTimeoutExample/>
         </div>
     );
 }
