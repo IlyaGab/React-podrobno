@@ -15,6 +15,7 @@ import Factorial from './Components/Factorial/Factorial';
 import UseCallback from './Components/useCallback/UseCallback';
 import UseState from './Components/UseState/UseState';
 import UseEffect, { SetTimeoutExample, TimeExample} from './Components/UseEffect/UseEffect';
+import Clock from './Components/Clock/Clock';
 
 
 
@@ -50,6 +51,7 @@ function App() {
             <UseEffect/>
             <SetTimeoutExample/>
             <TimeExample/>
+            <Clock/>
         </div>
     );
 }
