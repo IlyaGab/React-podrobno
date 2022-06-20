@@ -17,6 +17,7 @@ import UseState from './Components/UseState/UseState';
 import UseEffect, { SetTimeoutExample, TimeExample} from './Components/UseEffect/UseEffect';
 import Clock from './Components/Clock/Clock';
 import AnalogClock from './Components/AnalogClock/AnalogClock';
+import ResetUseEffect from './Components/ResetUseEffect/ResetUseEffect';
 
 
 
@@ -50,10 +51,11 @@ function App() {
             <UseCallback />
             <UseState/>
             <UseEffect/>
-            <SetTimeoutExample/>
-            <TimeExample/>
-            <Clock/>
-            <AnalogClock/>
+            {/*<SetTimeoutExample/>*/}
+            {/*<TimeExample/>*/}
+            {/*<Clock/>*/}
+            {/*<AnalogClock/>*/}
+            <ResetUseEffect/>
         </div>
     );
 }
